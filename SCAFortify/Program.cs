@@ -10,7 +10,7 @@ namespace SCAFortify
     {
         static void Main(string[] args)
         {
-            object message = "test";
+            object message = new ArgumentNullException();
             Info(message, new Exception(), args);
         }
         
