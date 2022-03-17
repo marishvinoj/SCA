@@ -10,10 +10,8 @@ namespace SCAFortify
     {
         static void Main(string[] args)
         {
-            var s = string.Format(args[0], "test");
-            params object[] args1;
             object message = "test";
-            Info(message, new Exception(), args1)
+            Info(message, new Exception(), args);
         }
         
         
