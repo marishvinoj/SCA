@@ -10,7 +10,7 @@ namespace SCAFortify
     {
         static void Main(string[] args)
         {
-            var s = string.Format("", "test");
+            var s = string.Format(args[0], "test");
         }
     }
 }
