@@ -20,7 +20,6 @@ namespace SCAFortify
             //  "(local); Initial Catalog = master; Integrated Security = True";
             //conn.Open();
             //Info(message, new Exception(), args);
-            var s = Regex.IsMatch("test", "test1");
         }
         
         
