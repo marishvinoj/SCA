@@ -47,7 +47,6 @@ jobs:
 
     - name: Build .NET with CodeQL
       run: |
-        nuget restore src/VSTSDemoGeneratorV2.sln
-        msbuild SCA/SCAFortify.sln /p:UseSharedCompilation=false /t:rebuild /p:Platform="Any CPU" /p:Configuration="Debug" /p:MvcBuildViews=true
+        msbuild SCA/SCAFortify.sln
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
