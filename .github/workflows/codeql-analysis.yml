@@ -49,16 +49,17 @@ jobs:
     #   make bootstrap
     #   make release 
 
-    - name: Install nuget Client
-      uses: nuget/setup-nuget@v1
+    #- name: Install nuget Client
+    #  uses: nuget/setup-nuget@v1
 
-    - name: Install Nuget packages
-      run: |
-        nuget restore SCAFortify.sln
+    #- name: Install Nuget packages
+    #  run: |
+    #    nuget restore SCAFortify.sln
 
     - name: Build .NET with CodeQL
       shell: cmd
       run: |
+        nuget restore SCAFortify.sln
         "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild.exe" "SCAFortify.sln" /tv:Current /p:UseSharedCompilation=false /t:rebuild /p:Platform="Any CPU" /p:Configuration="Debug" /p:MvcBuildViews=true
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
