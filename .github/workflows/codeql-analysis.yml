@@ -52,6 +52,7 @@ jobs:
     - name: Build .NET with CodeQL
       shell: cmd
       run: |
+        nuget restore SCAFortify.sln
         "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild.exe" "SCAFortify.sln" /p:MvcBuildViews=true
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
