@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@marishvinoj 
-microsoft
-/
-AzureDevOpsDemoGenerator
-Public
-Code
-Issues
-19
-Pull requests
-5
-Actions
-Projects
-Wiki
-Security
-Insights
-Update codeql.yml Code Scanning - Action #3
-Summary
-Workflow file
-Jobs
-CodeQL-Build
-Workflow file for this run
-.github/workflows/codeql.yml at b44f8a9
 name: "Code Scanning - Action"
 
 on:
@@ -80,6 +51,6 @@ jobs:
     - name: Build .NET with CodeQL
       run: |
         nuget restore src/VSTSDemoGeneratorV2.sln
-        msbuild src/VSTSDemoGeneratorV2.sln /p:UseSharedCompilation=false /t:rebuild /p:Platform="Any CPU" /p:Configuration="Debug" /p:MvcBuildViews=true
+        msbuild SCA/SCAFortify.sln /p:UseSharedCompilation=false /t:rebuild /p:Platform="Any CPU" /p:Configuration="Debug" /p:MvcBuildViews=true
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
