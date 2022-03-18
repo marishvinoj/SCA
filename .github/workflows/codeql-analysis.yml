@@ -47,6 +47,6 @@ jobs:
 
     - name: Build .NET with CodeQL
       run: |
-        msbuild SCA/SCAFortify.sln
+        msbuild SCAFortify.sln
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
