@@ -13,6 +13,7 @@ namespace WebApplication1.Controllers
         {
             var path = "test";
             test(path);
+
             return View();
         }
 
