@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs/SCAFortify/v16/Server/sqlite3
+*.cache
+*.config
+*.exe
+*.pdb
+*.txt
+.vs/SCAFortify/v16/.suo
+*.cache
+*.cache
+SCAFortify/obj/Debug/SCAFortify.csprojAssemblyReference.cache

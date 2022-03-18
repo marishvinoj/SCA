@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace SCAFortify
         static void Main(string[] args)
         {
             object message = new ArgumentNullException();
+            //Data Source = (local); Initial Catalog = master; Integrated Security = True
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString =
+              "(local); Initial Catalog = master; Integrated Security = True";
+            conn.Open();
             Info(message, new Exception(), args);
         }
         
