@@ -13,14 +13,11 @@ jobs:
 
 
     # CodeQL runs on ubuntu-latest, windows-latest, and macos-latest
-    runs-on: windows-latest
+    runs-on: windows-2019
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
@@ -46,7 +43,8 @@ jobs:
     #   make release
 
     - name: Build .NET with CodeQL
+      shell: cmd
       run: |
-        msbuild SCAFortify.sln
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild.exe" "SCAFortify.sln"
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
