@@ -6,19 +6,18 @@ on:
     - cron: '0 0 * * 0'
 
 jobs:
-  CodeQL-Build:
-
-    strategy:
-      fail-fast: false
-
-
-    # CodeQL runs on ubuntu-latest, windows-latest, and macos-latest
+  analyze:
+    name: Analyze
     runs-on: windows-2019
-    
+    permissions:
+      actions: read
+      contents: read
+      security-events: write    
+
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'csharp' ]
+      language: ['csharp']
 
     steps:
     - name: Checkout repository
@@ -29,7 +28,7 @@ jobs:
       uses: github/codeql-action/init@v1
       with:
         languages: ${{ matrix.language }}
-
+        debug: true
       # Override language selection by uncommenting this and choosing your languages
       # with:
       #   languages: go, javascript, csharp, python, cpp, java
