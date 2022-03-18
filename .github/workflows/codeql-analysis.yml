@@ -47,7 +47,7 @@ jobs:
 
     #- run: |
     #   make bootstrap
-    #   make release
+    #   make release 
 
     - name: Build .NET with CodeQL
       shell: cmd
