@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
         public ActionResult Index()
         {
             var path = "test";
-            test(path);
+            test(path); 
 
             return View();
         }
