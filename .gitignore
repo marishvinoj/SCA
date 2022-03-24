@@ -19,4 +19,4 @@ SCAFortify/obj/Debug/SCAFortify.csprojAssemblyReference.cache
 packages
 *bin
 obj
-
+*.vs/slnx.sqlite
