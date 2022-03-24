@@ -34,7 +34,7 @@ namespace SCAFortify
 
         //static string GetName(string formatString, string fileName)
         //{
-        //    Directory.CreateDirectory(fileName);
+        //    Directory.CreateDirectory(fileName); 
         //    return string.Format(formatString, "");
         //}
     }
